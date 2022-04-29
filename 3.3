@@ -1,0 +1,17 @@
+# Program 3.3
+# Author: HoangDanhQuan
+
+.text
+	# Assign X, Y
+	addi $t1, $zero, 4
+	addi $t2, $zero, 5
+	
+	# Expression Z = 3*XY
+	mul $s0, $t1, $t2
+	mul $s0, $s0, 3
+	
+	# Z' = Z
+	mflo $s1
+	
+	# Điều bất thường: toán tử mul với immediate được hợp dịch thành 2 lệnh
+			  #toán tử mul giữa hai thanh ghi được hợp dịch là 1 lệnh
