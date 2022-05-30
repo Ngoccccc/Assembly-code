@@ -37,3 +37,17 @@ PrintTab:
     jr $ra
 .data
     tab: .asciiz "\t"
+
+
+.text
+PromptInt:
+	li $v0,4
+	syscall
+	
+	li $v0,5
+	syscall
+	
+	jr $ra
+.data
+printf_newline: .asciiz "\n"
+
